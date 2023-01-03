@@ -136,8 +136,8 @@ def pairwise_hamming_kernel(X1, X2, weights=None):
     if weights is None:
       dim = len(X1[0])
       weights = np.ones((dim, ))/float(dim)
-    X1 = np.array(X1, dtype=np.object)
-    X2 = np.array(X2, dtype=np.object)
+    X1 = np.array(X1)
+    X2 = np.array(X2)
     n1, _ = X1.shape
     n2, _ = X2.shape
     if n2 < n1:
